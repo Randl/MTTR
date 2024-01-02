@@ -57,5 +57,5 @@ def mttr_refer_youtube_vos(get_weights=True, config=None, config_dir=None, args=
         model_state_dict = torch.load(checkpoint_path, map_location='cpu')
         if 'model_state_dict' in model_state_dict.keys():
             model_state_dict = model_state_dict['model_state_dict']
-        model.load_state_dict(model_state_dict, strict=True)
+        model.load_state_dict(model_state_dict, strict=False)
     return model, postprocessor
